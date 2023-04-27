@@ -4,7 +4,7 @@ const PORT = 8080;
 
 app.use( express.json() )
 
-app.listen(PORT);
+app.listen(process.env.PORT || PORT);
 
 app.post('/book', (req, res) => {
     const { title, author, pages } = req.body;
