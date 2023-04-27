@@ -92,4 +92,10 @@ app.put('/book/:id', (req, res) => {
     books.splice(bookIndex, 1);
   
     res.status(200).send({ message: 'Book deleted successfully' });
-  });
+  });  
+
+app.delete('/books', (req, res) => {
+  books.length = 0;
+
+  res.status(200).send({ message: 'All books deleted successfully' });
+});
